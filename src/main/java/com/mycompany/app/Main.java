@@ -1,34 +1,35 @@
+package com.mycompany.app;
+
 import java.util.Date;
 
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Emprestimo;
+import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.Usuario;
+
 public class Main {
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-Date data = new Date();
+        // Criando um  Autor
+        Autor autor = new Autor("Jess","Inglesa");
 
-Livro[] livrosPublicados = {};
+        // Criando um Livro
+        Livro livro = new Livro("Java For Begginers", autor, "tecnologia", true);
+        livro.validarDisponibilidade();
+        
+        // Criando um Usuario
+        Usuario usuario = new Usuario("Jess",21);
 
-Autor autor = new Autor("Brasileiro", livrosPublicados);
-autor.setNome("João da Silva");
+        // Criando um Emprestimo
+        Emprestimo emprestimo = new Emprestimo((new Date()), (new Date()), livro, usuario); 
 
-Livro livro = new Livro();
-livro.setTitulo("Java for Beginners");
-livro.setAutor(autor);
-livro.setGenero("Tecnologia");
-
-livro.validarDisponibilidade();
-livro.imprimirInformacoes();
-
-Usuario usuario = new Usuario();
-usuario.setNome("Erick");
-usuario.setIdade(34);
-
-usuario.imprimirInformacoes();
-
-Emprestimo emprestimo = new Emprestimo();
-emprestimo.setDataRetirada(data);
-emprestimo.setDataDevolucao(data);
-
-emprestimo.imprimirInformacoes();
-}
-
+        // Exibindo informações
+        System.out.println("Livro: " + livro.getTitulo());
+        System.out.println("Autor: " + livro.getAutor().getNome());
+        System.out.println("Gênero: " + livro.getGenero());
+        System.out.println("Usuário: " + usuario.getNome());
+        System.out.println("Idade: " + usuario.getIdade());
+        System.out.println("Data de Retirada: " + emprestimo.getDataRetirada());
+        System.out.println("Data de Devolução: " + emprestimo.getDataDevolucao());
+    }
 }
