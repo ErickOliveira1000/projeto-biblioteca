@@ -12,6 +12,8 @@ public class Main {
 
         // Criando um  Autor
         Autor autor = new Autor("Jess","Inglesa");
+        String nome = autor.getNome();
+
 
         // Criando um Livro
         Livro livro = new Livro("Java For Begginers", autor, "tecnologia", true);
@@ -25,7 +27,7 @@ public class Main {
 
         // Exibindo informações
         System.out.println("Livro: " + livro.getTitulo());
-        System.out.println("Autor: " + livro.getAutor().getNome());
+        System.out.println("Autor: " + autor.getNome());
         System.out.println("Gênero: " + livro.getGenero());
         System.out.println("Usuário: " + usuario.getNome());
         System.out.println("Idade: " + usuario.getIdade());

@@ -1,36 +1,18 @@
 package com.mycompany.app.Model;
 
-public class Livro {
-    private String titulo;
-    private Autor autor;
+public class Livro extends Publicacao{
     private String genero;
     private boolean disponivel;
 
     // Construtor
 
-    public Livro(String titulo, Autor autor, String genero, boolean disponivel){
-        this.titulo = titulo;
-        this.autor = autor;
+    public Livro(String titulo, Autor autor, String genero, boolean disponivel) {
+        super(titulo, autor);
         this.genero = genero;
         this.disponivel = disponivel;
     }
+
     // Getters e Setters
-    
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Autor getAutor() {
-        return autor;
-    }
-
-    public void setAutor(Autor autor) {
-        this.autor = autor;
-    }
 
     public String getGenero() {
         return genero;
@@ -57,4 +39,11 @@ public class Livro {
             System.out.println("O livro não está disponível.");
         }
     }
+
+    @Override
+    public void validarPublicação() {
+        // Lógica específica de validação para Livro
+        System.out.println("Validando publicação de Livro...");
+    }
+
 }

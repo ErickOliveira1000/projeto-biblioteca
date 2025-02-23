@@ -1,6 +1,8 @@
 package com.mycompany.app.Model;
 
-public class Pessoa {
+import com.mycompany.app.Interface.Pessoavel;
+
+public class Pessoa implements Pessoavel {
 
     private String nome;
 
@@ -8,10 +10,12 @@ public class Pessoa {
         this.nome = nome;
     }
     
+    @Override
     public String getNome() {
         return nome;
     }
 
+    @Override
     public void setNome(String nome) {
         this.nome = nome;
     }

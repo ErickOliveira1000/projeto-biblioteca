@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import org.junit.Test;
 
+import com.mycompany.app.Interface.Pessoavel;
 import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Livro;
 import com.mycompany.app.Model.Pessoa;
@@ -12,7 +13,7 @@ public class PessoaTest {
     @Test
     public void testGetNome() {
         // Cria uma instância da classe Pessoa
-        Pessoa pessoa = new Pessoa("Jess");
+        Pessoavel pessoa = new Pessoa("Jess");
         // Atribuir um nome para a pessoa
         pessoa.setNome("Jess");
         // Verifica se o nome retornado é o mesmo que foi setado
@@ -21,7 +22,7 @@ public class PessoaTest {
     @Test
     public void testSetNome() {
     // Cria uma instância da classe Pessoa
-        Pessoa pessoa = new Pessoa("Jess");
+        Pessoavel pessoa = new Pessoa("Jess");
         // Define um nome para a pessoa
         pessoa.setNome("Jess");
         // Verifica se o nome retornado é o mesmo que foi setado

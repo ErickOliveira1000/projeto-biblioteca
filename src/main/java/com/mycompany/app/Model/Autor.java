@@ -2,7 +2,6 @@ package com.mycompany.app.Model;
 
 public class Autor extends Pessoa {
     private String nacionalidade;
-    //private String obrasPublicadas;
 
     // Construtor com nome e nacionalidade
 
@@ -10,10 +9,7 @@ public class Autor extends Pessoa {
         super(nome);
         //  Chama o construtor da classe Pessoa para inicializar o nome
         this.nacionalidade = nacionalidade;
-        //this.obrasPublicadas = obrasPublicadas;
     }
-    
-    // Getters e Setters
 
     public String getNacionalidade() {
         return nacionalidade;
@@ -23,16 +19,30 @@ public class Autor extends Pessoa {
         this.nacionalidade = nacionalidade;
     }
 
-    //public Livro[] getObrasPublicadas() {
-    //    return obrasPublicadas;
-    //}
+    private Livro[] obrasPublicadas;
 
-    //public void setObrasPublicadas(Livro[] obrasPublicadas) {
-    //    this.obrasPublicadas = obrasPublicadas;
-    //}
-
-    public String toString(){
-        return this.getNome();
+    public Livro[] getObrasPublicadas() {
+        return obrasPublicadas;
     }
+
+    public void setObrasPublicadas(Livro[] obrasPublicadas) {
+        this.obrasPublicadas = obrasPublicadas;
+    }
+
+    public Livro[] getObrasPublicadasPorGenero(String genero) {
+        // Lógica para retornar as obras publicadas por gênero
+        return null;
+    }
+
+    @Override
+    public String getNome() {
+        return super.getNome();
+    }
+
+    @Override
+    public void setNome(String nome) {
+        super.setNome(nome);
+    }
+
 
 }
