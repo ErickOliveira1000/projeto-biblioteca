@@ -2,15 +2,15 @@ package com.mycompany.app.Model;
 
 public class Autor extends Pessoa {
     private String nacionalidade;
-    //private String obrasPublicadas;
+    private boolean isUsuario; // Novo campo para indicar se é um usuário ou autor tradicional
 
     // Construtor com nome e nacionalidade
 
-    public Autor(String nome, String nacionalidade) {
+    public Autor(String nome, String nacionalidade, boolean isUsuario) {
         super(nome);
         //  Chama o construtor da classe Pessoa para inicializar o nome
         this.nacionalidade = nacionalidade;
-        //this.obrasPublicadas = obrasPublicadas;
+        this.isUsuario = isUsuario;
     }
     
     // Getters e Setters
@@ -23,16 +23,26 @@ public class Autor extends Pessoa {
         this.nacionalidade = nacionalidade;
     }
 
-    //public Livro[] getObrasPublicadas() {
-    //    return obrasPublicadas;
-    //}
+    public boolean getUsuario() {
+        return isUsuario;
+    }
 
-    //public void setObrasPublicadas(Livro[] obrasPublicadas) {
-    //    this.obrasPublicadas = obrasPublicadas;
-    //}
+    public void setUsuario(boolean isUsuario) {
+        this.isUsuario = isUsuario;
+    }
 
     public String toString(){
         return this.getNome();
     }
 
+    // Método definirUsuario
+
+    public void definirUsuario() {
+        if (isUsuario) {
+            System.out.println("Usuário");
+        } else {
+            System.out.println("Autor Tradicional");
+        }
+    }
+   
 }

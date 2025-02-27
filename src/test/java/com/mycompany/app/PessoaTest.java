@@ -33,7 +33,7 @@ public class PessoaTest {
     public void testGetLivros() {
     // Cria uma instância da classe Pessoa e da classe Autor
         Pessoa pessoa = new Pessoa("Jess");
-        Autor autor = new Autor("Jess","Brasileira");
+        Autor autor = new Autor("Jess","Brasileira", true);
 
 
         // Define uma lista de livros para a pessoa
