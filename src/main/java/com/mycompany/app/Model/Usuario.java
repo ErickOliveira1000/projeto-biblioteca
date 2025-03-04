@@ -1,8 +1,8 @@
 package com.mycompany.app.Model;
 
-import com.mycompany.app.Interface.AutorInterface;
+//import com.mycompany.app.Interface.AutorInterface;
 
-public class Usuario extends Pessoa implements AutorInterface{
+public class Usuario extends Pessoa{
     private int idade;
     private Emprestimo[] historicoEmprestimos;
 
@@ -31,10 +31,10 @@ public class Usuario extends Pessoa implements AutorInterface{
     }
 
     // Implementação do método publicar() para Usuário
-    @Override
-    public void publicar() {
-        System.out.println("Usuário publicando...");
-    }
+    //@Override
+    //public void publicar() {
+    //    System.out.println("Usuário publicando...");
+    //}
 
 
 }

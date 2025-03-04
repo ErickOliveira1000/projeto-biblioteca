@@ -7,6 +7,7 @@ import com.mycompany.app.Model.Emprestimo;
 import com.mycompany.app.Model.Livro;
 import com.mycompany.app.Model.Usuario;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -33,5 +34,8 @@ public class Main {
         System.out.println("Idade: " + usuario.getIdade());
         System.out.println("Data de Retirada: " + emprestimo.getDataRetirada());
         System.out.println("Data de Devolução: " + emprestimo.getDataDevolucao());
+
+        
+        autor.publicar();
     }
 }

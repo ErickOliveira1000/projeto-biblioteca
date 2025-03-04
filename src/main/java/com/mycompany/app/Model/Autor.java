@@ -1,7 +1,23 @@
 package com.mycompany.app.Model;
 
+import com.mycompany.app.Interface.PublicavelInterface;
+
 public class Autor extends Pessoa {
     private String nacionalidade;
+    private PublicavelInterface estrategiaPublicacao;
+
+    public void setEstrategiaPublicacao(PublicavelInterface estrategiaPublicacao) {
+        this.estrategiaPublicacao = estrategiaPublicacao;
+    }
+
+    public void publicar() {
+        
+        if (estrategiaPublicacao != null) {
+            estrategiaPublicacao.publicar();
+        } else {
+            System.out.println("Nenhuma estratégia de publicação definida.");
+        }
+    }
 
     // Construtor com nome e nacionalidade
 
